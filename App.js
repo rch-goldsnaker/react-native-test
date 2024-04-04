@@ -1,14 +1,34 @@
 import { BlurView } from 'expo-blur'
 import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
+import {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword} from 'firebase/auth'
+import { initializeApp } from "firebase/app";
+import { firebaseConfig } from './firebase-config'
+
 const backPicture = 'https://picsum.photos/2400/1080'
 const profilePicture = 'https://picsum.photos/100/100'
+
+function HomeScreen(){
+  return(
+    <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+      <Text>Home Screen</Text>
+    </View>
+  )
+}
+
+function LoginScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
+  )
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: 'https://picsum.photos/2400/1080' }}
+        source={{ uri: backPicture }}
         style={[styles.image, StyleSheet.absoluteFill]}
       />
       <ScrollView contentContainerStyle={{
